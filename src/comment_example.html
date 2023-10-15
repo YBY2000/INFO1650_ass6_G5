@@ -43,6 +43,7 @@
     function handleCommentSubmit() {
         let comment = document.querySelector("textarea").value;
         let commentObj = {
+            // 根据comments里的数据结构修改然后填入
             id: comments.length + 1,
             content: comment,
             time: new Date().toLocaleString(),
