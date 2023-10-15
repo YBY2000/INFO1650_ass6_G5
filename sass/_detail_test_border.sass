@@ -1,0 +1,17 @@
+$radius: 2px
+$borderwidth: 1px
+@mixin testborder($borderColor: black)
+  border: solid $borderwidth $borderColor
+  border-radius: $radius
+
+body.detail_body
+  .detail_main_container
+    @include testborder()
+  .detail_breadcrumb_container
+    @include testborder()
+  .detail_pic_rate_container
+    @include testborder()
+    .detail_carousel_container
+      @include testborder()
+  .detail_intro_container
+    @include testborder()

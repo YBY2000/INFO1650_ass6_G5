@@ -1,0 +1,22 @@
+%align
+  align-items: center
+  align-content: center
+%justi
+  justify-content: center
+  justify-items: center
+
+%boldfont
+  font-weight: bold
+
+.breadcrumb.Detail0
+  a
+    @extend %boldfont
+    text-decoration-line: none
+
+.detail_breadcrumb_container.Detail0
+  nav.Detail0, ol ,li
+    display: flex
+    @extend %align
+    text-align: center
+  ol
+    margin: 0

@@ -1,0 +1,92 @@
+body.detail_body .detail_main_container {
+  border: solid 1px black;
+  border-radius: 2px;
+}
+body.detail_body .detail_breadcrumb_container {
+  border: solid 1px black;
+  border-radius: 2px;
+}
+body.detail_body .detail_pic_rate_container {
+  border: solid 1px black;
+  border-radius: 2px;
+}
+body.detail_body .detail_pic_rate_container .detail_carousel_container {
+  border: solid 1px black;
+  border-radius: 2px;
+}
+body.detail_body .detail_intro_container {
+  border: solid 1px black;
+  border-radius: 2px;
+}
+
+.detail_breadcrumb_container {
+  align-items: center;
+  align-content: center;
+}
+
+.detail_intro_container, .detail_pic_rate_container, .detail_breadcrumb_container {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.detail_breadcrumb_container {
+  height: 50px;
+  margin-top: 2px;
+  display: flex;
+}
+
+.detail_pic_rate_container {
+  margin-top: 5px;
+  height: 450px;
+  display: flex;
+}
+
+.detail_intro_container {
+  margin-top: 30px;
+  height: 600px;
+  display: flex;
+}
+
+.detail_carousel_container {
+  width: 48%;
+  height: 85%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 3%;
+}
+
+.detail_breadcrumb_container.Detail0 nav.Detail0, .detail_breadcrumb_container.Detail0 ol, .detail_breadcrumb_container.Detail0 li {
+  align-items: center;
+  align-content: center;
+}
+
+.breadcrumb.Detail0 a {
+  font-weight: bold;
+}
+
+.breadcrumb.Detail0 a {
+  text-decoration-line: none;
+}
+
+.detail_breadcrumb_container.Detail0 nav.Detail0, .detail_breadcrumb_container.Detail0 ol, .detail_breadcrumb_container.Detail0 li {
+  display: flex;
+  text-align: center;
+}
+.detail_breadcrumb_container.Detail0 ol {
+  margin: 0;
+}
+
+.detail_main_container, body.detail_body {
+  padding: 0;
+  margin: 0;
+}
+
+.detail_main_container {
+  --screenwith: 0;
+  height: 2000px;
+  width: var(--screenwith);
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=detail_main.css.map */
