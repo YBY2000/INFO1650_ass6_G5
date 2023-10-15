@@ -6,7 +6,8 @@
             {
                 "review_id": "1",
                 "reviewer_name": "John Doe",
-                "reviewer_email": "",
+                "reviewer_email": "johndoe123@gmail.com",
+                "reviewer_id": "1",
                 "review_title": "Great place",
                 "review_time": "2018-01-01 00:00:00",
                 "star_rating": "5",
