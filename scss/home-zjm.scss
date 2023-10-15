@@ -1,10 +1,98 @@
 .navbar-zjm {
   .navbar {
-    .container-fluid {
-      .navbar-brand {
-        margin: 2em;
-        padding: 2em;
+    padding: 0.5rem 1rem;
+    // background-color: #f8f9fa; // light grey
+    // transition: background-color 0.3s ease;
+
+    // &:hover {
+    //   background-color: #e9ecef; // darker grey on hover
+    // }
+
+    @media (min-width: 992px) {
+      padding: 1rem;
+    }
+    @media (max-width: 768px) {
+      flex-direction: column !important;
+
+      // 移动端搜索框的样式
+      #mobileSearch {
+        padding: 0.5rem;
       }
     }
   }
+
+  // 适应小尺寸屏幕
+  @media (max-width: 768px) {
+    .input-group {
+      margin-bottom: 15px !important;
+    }
+  }
+
+  .container-fluid {
+    .navbar-nav {
+      .nav-link {
+        color: #007bff !important; // blue
+
+        &:hover {
+          color: #0056b3 !important; // darker blue on hover
+        }
+
+        &.active {
+          color: #0056b3 !important; // darker blue
+        }
+
+        &.disabled {
+          color: #ccc !important; // grey
+        }
+      }
+
+      .dropdown-menu {
+        border-radius: 0; // no rounded corners
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // subtle shadow
+
+        .dropdown-item {
+          color: #007bff !important; // blue
+
+          &:hover {
+            background-color: #f1f1f1; // light grey background on hover
+          }
+        }
+      }
+
+      // .nav-profile {
+      //   padding-right: 10em;
+      // }
+    }
+
+    .navbar-right {
+      margin-right: 6em;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    }
+
+    //   .custom-dropdown-profile {
+    //     margin-left: -2em; // adjust this value to move it to the left
+    //   }
+  }
 }
+
+@media (max-width: 768px) {
+  .navbar-right {
+    flex-direction: column !important;
+  }
+  .input-group {
+    margin-bottom: 15px !important;
+  }
+}
+
+// .custom-dropdown-profile {
+//   margin-right: 5em; // adjust this value to move it to the left
+
+//   // add some flair to the profile dropdown
+//   .dropdown-toggle::after {
+//     content: "\f107"; // FontAwesome down arrow, you need FontAwesome for this to work
+//     font-family: FontAwesome;
+//     padding-left: 5px;
+//   }
+// }
