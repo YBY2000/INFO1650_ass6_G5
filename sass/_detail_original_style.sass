@@ -1,4 +1,8 @@
 .detail_rating
+  display: flex
+  flex-direction: row
+  align-items: center
+  align-content: center
   cursor: pointer
   span.active
     color: yellow
@@ -30,14 +34,11 @@
   display: flex
   flex-direction: column
   h6
-    white-space: nowrap
-    overflow: hidden
-    text-overflow: ellipsis
     margin-top: 5px
     margin-bottom: 5px
 
 .detail_intro_content
-  overflow: scroll
+  overflow: auto
   height: 33%
   width: 90%
   margin: auto auto auto auto
@@ -50,4 +51,24 @@
     display: flex
     height: 40px
     align-items: center
+
+
+@media (max-width: 800px)
+  .list-group-item.d-flex.justify-content-between.align-items-center.Detail0
+    padding: 1px
+    margin: 0
+    h1
+      font-size: 23px
+    h6
+      font-size: 12px
+  .detail_rating.Detail0
+    span
+      font-size: 28px
+  .detail_score.Detail0
+    span
+      font-size: 22px
+    .detail_yellow_bold
+      font-size: 25px
+
+
 
