@@ -1,6 +1,6 @@
-$radius: 2px
+$radius: 8px
 $borderwidth: 1px
-@mixin testborder($borderColor: black)
+@mixin testborder($borderColor: black ,$width: #{$borderwidth})
   border: solid $borderwidth $borderColor
   border-radius: $radius
 
@@ -13,5 +13,11 @@ body.detail_body
     @include testborder()
     .detail_carousel_container
       @include testborder()
+    .detail_rate_info_container
+      @include testborder()
   .detail_intro_container
     @include testborder()
+
+.detail_list_title
+  h6
+    @include testborder(0px)

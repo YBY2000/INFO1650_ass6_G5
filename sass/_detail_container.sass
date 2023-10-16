@@ -4,7 +4,8 @@
 %justi
   justify-content: center
   justify-items: center
-
+$backcolor:white
+$radius:10px
 %alignedwidth_center
   width: 60%
   margin-left: auto
@@ -21,16 +22,22 @@
   margin-top: 5px
   height: 450px
   display: flex
-
+  background-color: #{$backcolor}
+  border-radius: #{$radius}
 .detail_intro_container
   @extend %alignedwidth_center
   margin-top: 30px
   height: 600px
   display: flex
-
-.detail_carousel_container
+%a1
   width: 48%
   height: 85%
   margin-top: auto
   margin-bottom: auto
-  margin-left: 3%
+  margin-left: 20px
+.detail_carousel_container
+  @extend %a1
+.detail_rate_info_container
+  @extend %a1
+  width: 40%
+  margin-left: 95px
