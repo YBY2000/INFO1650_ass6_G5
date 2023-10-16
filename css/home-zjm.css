@@ -37,22 +37,15 @@
   align-items: center;
 }
 
-@media (max-width: 768px) {
+.dropdown-item-avatar {
+  width: max-content;
+  padding: 10px 25px;
+}
+
+@media (max-width: 991px) {
   .input-group {
     margin-bottom: 15px !important;
   }
-}
-@media (min-width: 1300px) {
-  /* Large devices (desktops, 992px and up) */
-  .navbar .navbar-collapse {
-    display: flex;
-    justify-content: space-between;
-  }
-  .navbar .navbar-collapse .custom-dropdown-profile {
-    margin-right: 100em;
-  }
-}
-@media (max-width: 800px) {
   /* Small to medium devices (tablets, less than 992px) */
   .navbar .navbar-collapse {
     flex-direction: column;
@@ -60,6 +53,21 @@
   }
   .navbar .navbar-collapse form.d-flex {
     width: 100%;
+    margin-right: 2rem;
     margin-top: 1rem;
+  }
+  .navbar-zjm .navbar .container-fluid .nav-profile {
+    text-align: left;
+  }
+}
+@media (min-width: 992px) {
+  /* Large devices (desktops, 992px and up) */
+  .navbar .navbar-collapse {
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar .navbar-collapse .custom-dropdown-profile {
+    right: 10;
+    left: unset;
   }
 }/*# sourceMappingURL=home-zjm.css.map */
