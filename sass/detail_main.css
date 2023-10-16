@@ -170,25 +170,25 @@ body.detail_body .detail_comment_container {
 }
 
 .detail_intro_content2 .accordion.Detail0 {
-  max-height: 270px;
+  max-height: 250px;
   height: auto;
   flex: 1;
 }
 
 .detail_intro_content .accordion.Detail0 {
-  max-height: 120px;
+  max-height: 140px;
   height: auto;
   flex: 1;
 }
 
 .detail_intro_content2 .accordion-item.Detail0 {
-  max-height: 270px;
+  max-height: 250px;
   display: flex;
   flex-direction: column;
 }
 
 .detail_intro_content .accordion-item.Detail0 {
-  max-height: 120px;
+  max-height: 140px;
   display: flex;
   flex-direction: column;
 }
@@ -206,9 +206,9 @@ body.detail_body .detail_comment_container {
 }
 
 .accordion-button.Detail0 {
-  font-size: 25px;
+  font-size: 23px;
   font-weight: bold;
-  padding: 8px;
+  padding: 4px;
   align-items: center;
   align-content: center;
 }
@@ -262,7 +262,7 @@ body.detail_body .detail_comment_container {
 .detail_intro_content {
   overflow: hidden;
   height: auto;
-  max-height: 120px;
+  max-height: 140px;
   width: 90%;
   margin: 0.5% auto 1% auto;
   display: flex;
@@ -271,7 +271,7 @@ body.detail_body .detail_comment_container {
 
 .detail_intro_content2 {
   overflow: hidden;
-  max-height: 270px;
+  max-height: 250px;
   height: auto;
   width: 90%;
   margin: 1.5% auto 0.5% auto;
