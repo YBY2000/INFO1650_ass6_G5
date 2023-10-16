@@ -38,20 +38,22 @@
     margin-bottom: 5px
 
 .detail_intro_content
-  overflow: auto
-  height: 33%
+  overflow: hidden
+  height: auto
+  max-height: 120px
   width: 90%
-  margin: auto auto auto auto
+  margin: 0.5% auto 1% auto
   display: flex
   flex-direction: column
-  h4
-    font-weight: bold
-    margin-top: 12px
-    margin-bottom: 12px
-    display: flex
-    height: 40px
-    align-items: center
 
+.detail_intro_content2
+  overflow: hidden
+  max-height: 270px
+  height: auto
+  width: 90%
+  margin: 1.5% auto 0.5% auto
+  display: flex
+  flex-direction: column
 
 @media (max-width: 800px)
   .list-group-item.d-flex.justify-content-between.align-items-center.Detail0

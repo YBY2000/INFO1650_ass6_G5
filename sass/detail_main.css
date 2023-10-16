@@ -26,6 +26,10 @@ body.detail_body .detail_intro_container .detail_intro_content {
   border: solid 1px black;
   border-radius: 8px;
 }
+body.detail_body .detail_intro_container .detail_intro_content2 {
+  border: solid 1px black;
+  border-radius: 8px;
+}
 body.detail_body .detail_comment_container {
   border: solid 1px black;
   border-radius: 8px;
@@ -66,7 +70,8 @@ body.detail_body .detail_comment_container {
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
-  height: 600px;
+  max-height: 600px;
+  height: auto;
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -158,6 +163,56 @@ body.detail_body .detail_comment_container {
   align-items: unset !important;
 }
 
+.accordion-collapse.collapse.show.Detail0 {
+  height: auto;
+  flex: 1;
+  overflow: auto;
+}
+
+.detail_intro_content2 .accordion.Detail0 {
+  max-height: 270px;
+  height: auto;
+  flex: 1;
+}
+
+.detail_intro_content .accordion.Detail0 {
+  max-height: 120px;
+  height: auto;
+  flex: 1;
+}
+
+.detail_intro_content2 .accordion-item.Detail0 {
+  max-height: 270px;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail_intro_content .accordion-item.Detail0 {
+  max-height: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail_intro_content2 .accordion-body {
+  flex: 1;
+  overflow: auto;
+  height: auto;
+}
+
+.detail_intro_content .accordion-body {
+  flex: 1;
+  overflow: auto;
+  height: auto;
+}
+
+.accordion-button.Detail0 {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 8px;
+  align-items: center;
+  align-content: center;
+}
+
 .detail_rating {
   display: flex;
   flex-direction: row;
@@ -205,20 +260,23 @@ body.detail_body .detail_comment_container {
 }
 
 .detail_intro_content {
-  overflow: auto;
-  height: 33%;
+  overflow: hidden;
+  height: auto;
+  max-height: 120px;
   width: 90%;
-  margin: auto auto auto auto;
+  margin: 0.5% auto 1% auto;
   display: flex;
   flex-direction: column;
 }
-.detail_intro_content h4 {
-  font-weight: bold;
-  margin-top: 12px;
-  margin-bottom: 12px;
+
+.detail_intro_content2 {
+  overflow: hidden;
+  max-height: 270px;
+  height: auto;
+  width: 90%;
+  margin: 1.5% auto 0.5% auto;
   display: flex;
-  height: 40px;
-  align-items: center;
+  flex-direction: column;
 }
 
 @media (max-width: 800px) {
