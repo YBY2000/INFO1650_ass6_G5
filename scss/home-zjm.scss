@@ -41,17 +41,19 @@ $bg-hover: #f1f1f1;
 
       .nav-profile {
         text-align: right;
-        padding-right: 10em;
-        .custom-dropdown-profile {
-          padding: auto;
-        }
+        padding-right: 5em;
+        // .custom-dropdown-profile {
       }
-      .navbar-right {
-        margin-right: 6em;
-        margin-left: auto;
-        display: flex;
-        align-items: center;
+
+      .custom-dropdown-profile {
+        margin-right: 15em;
       }
+    }
+    .navbar-right {
+      margin-right: 6em;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
     }
   }
 }
@@ -59,6 +61,19 @@ $bg-hover: #f1f1f1;
 .dropdown-item-avatar {
   width: max-content;
   padding: 10px 25px;
+}
+
+//1163-990
+/* 自定义媒体查询，用于1160-990px屏幕尺寸 */
+@media (max-width: 1160px) and (min-width: 990px) {
+  /* 在这里添加您想要更改的样式 */
+
+  /* 例如：将导航栏切换为堆叠模式 */
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: column !important;
+  }
+
+  /* 更多自定义样式... */
 }
 
 @media (max-width: 991px) {
