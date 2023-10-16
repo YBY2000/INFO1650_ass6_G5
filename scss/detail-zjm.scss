@@ -56,6 +56,11 @@ $bg-hover: #f1f1f1;
   }
 }
 
+.underNavbar {
+  z-index: 1100; /* 或更高的值，只要比.navbar的z-index值高 */
+  position: relative; /* 注意：z-index需要一个定位属性才能起作用 */
+}
+
 // 适应小尺寸屏幕
 @media (max-width: 768px) {
   .input-group {
