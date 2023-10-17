@@ -31,12 +31,6 @@
 .navbar-zjm .navbar .container-fluid .custom-dropdown-profile {
   margin-right: 15em;
 }
-.navbar-zjm .navbar .navbar-right {
-  margin-right: 6em;
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-}
 
 .dropdown-item-avatar {
   width: max-content;
@@ -52,6 +46,7 @@
   }
   /* 更多自定义样式... */
 }
+/* 当视口小于1100px时 */
 @media (max-width: 991px) {
   .input-group {
     margin-bottom: 15px !important;
