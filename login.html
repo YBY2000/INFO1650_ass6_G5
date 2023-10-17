@@ -16,8 +16,12 @@
 </head>
 
 <body>
+  <div id="backButtonContainer" class="backButtonContainer">
+    <button type="submit" class="btn btn-primary">Back</button>
+  </div>
   <div class="loginContainer">
     <div class="left">
+
       <h1>Login now</h1>
       <h1>To start your journey!</h1>
       <!--Layout -->
@@ -25,16 +29,18 @@
       <form class="was-validated">
         <div class="mb-3">
           <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail3" required
+          <input type="email" class="form-control" id="inputEmail3" placeholder="xxx@xx.xxx" required
             pattern="^[a-zA-Z0-9._\\u002D]+@[a-zA-Z0-9._\\u002D]+\.[a-zA-Z]+">
         </div>
         <div class="mb-3">
           <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-          <input type="password" class="form-control" id="inputPassword3">
+          <input type="password" class="form-control" id="inputPassword3" placeholder="At least 6 characters" required
+            minlength="6" maxlength="50">
         </div>
+        
 
-        <button type="submit" class="btn btn-primary">Sign in</button>
-        <button type="submit" class="btn btn-secondary">Back</button>
+        <button type="submit" class="btn btn-primary">Log in</button>
+
       </form>
     </div>
     <img src="images/business-meeting.png" alt="">
