@@ -136,60 +136,40 @@
     </div>
     <div class="detail_comment_container">
         <div class="detail_comment_head">Comments</div>
-        <div class="detail_comment_contents">
-            <div class="detail_comments_item_container">
-                <div class="detail_comment_c1" style="display: flex;flex-direction: column">
-                    <div class="detail_comment_icon"></div>
-                    <div class="detail_comment_name"></div>
+        <div class="detail_comment_contents" id="app">
+            <div class="detail_comments_item_container" v-for="comment in tarcomments">
+                <div class="detail_comment_c1" >
+                    <div class="detail_comment_icon">
+                        
+                    </div>
+                    <div class="detail_comment_name">
+                        {{comment.reviews[0].reviewer_name}}
+                    </div>
                 </div>
-                <div class="detail_comment_c2" style="display: flex;flex-direction: column">
-                    <div class="detail_comment_rate"></div>
+                <div class="detail_comment_c2" >
+                    <div class="detail_comment_rate">
+                        <span v-for="n in 5" :key="n">
+                            <span v-if="n <= comment.reviews[0].star_rating" style="color: orangered" class="detail_comment_rate_star">★</span>
+                            <span v-else class="detail_comment_rate_star">☆</span>
+                        </span>
+
+                    </div>
                     <div class="detail_comment_text">
                         <p>
-                            The Statue of Liberty, located on Liberty Island in New York Harbor, is a symbol of freedom and democracy. It was a gift to the United States from the people of France and
-                            The Statue of Liberty, located on Liberty Island in New York Harbor, is a symbol of freedom and democracy. It was a gift to the United States from the people of France and
-                            The Statue of Liberty, located on Liberty Island in New York Harbor, is a symbol of freedom and democracy. It was a gift to the United States from the people of France and
-                            The Statue of Liberty, located on Liberty Island in New York Harbor, is a symbol of freedom and democracy. It was a gift to the United States from the people of France and
-                            The Statue of Liberty, located on Liberty Island in New York Harbor, is a symbol of freedom and democracy. It was a gift to the United States from the people of France and
-                            The Statue of Liberty, located on Liberty Island in New York Harbor, is a symbol of freedom and democracy. It was a gift to the United States from the people of France and
+                            {{comment.reviews[0].detailed_review}}
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="detail_comments_item_container">
-                <div class="detail_comment_c1" style="display: flex;flex-direction: column">
-                    <div class="detail_comment_icon"></div>
-                    <div class="detail_comment_name"></div>
-                </div>
-                <div class="detail_comment_c2" style="display: flex;flex-direction: column">
-                    <div class="detail_comment_rate"></div>
-                    <div class="detail_comment_text"></div>
-                </div>
-            </div>
-            <div class="detail_comments_item_container">
-                <div class="detail_comment_c1" style="display: flex;flex-direction: column">
-                    <div class="detail_comment_icon"></div>
-                    <div class="detail_comment_name"></div>
-                </div>
-                <div class="detail_comment_c2" style="display: flex;flex-direction: column">
-                    <div class="detail_comment_rate"></div>
-                    <div class="detail_comment_text"></div>
-                </div>
-            </div>
-            <div class="detail_comments_item_container">
-                <div class="detail_comment_c1" style="display: flex;flex-direction: column">
-                    <div class="detail_comment_icon"></div>
-                    <div class="detail_comment_name"></div>
-                </div>
-                <div class="detail_comment_c2" style="display: flex;flex-direction: column">
-                    <div class="detail_comment_rate"></div>
-                    <div class="detail_comment_text"></div>
-                </div>
-            </div>
+        </div>
+        <div class="detail_comment_input">
+
         </div>
     </div>
 </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="/js/detail.js"></script>
 <script src="/js/read_attraction.js"></script>
+<script src="/js/read_comments.js"></script>

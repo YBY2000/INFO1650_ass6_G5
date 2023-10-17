@@ -50,11 +50,12 @@ $containerwidth:70%
   margin-left: auto
   margin-right: 5%
 
+.detail_comment_input
 
 .detail_comment_container
   @include alignedwidth_center($containerwidth)
   margin-top: 30px
-  max-height: 900px
+  max-height: 1000px
   height: auto
   display: flex
   flex-direction: column
@@ -63,35 +64,36 @@ $containerwidth:70%
 
 @media (max-width: 1300px)
   .detail_intro_container, .detail_comment_container
-    margin-top: 15px
+    margin-top: 15px !important
   .detail_pic_rate_container
-    flex-direction: column
-    height: auto
+    flex-direction: column !important
+    height: auto !important
     .detail_carousel_container
-      height: auto
-      width: 90%
-      margin: 5px auto 0 auto
-      max-width: 600px
+      height: auto !important
+      width: 90% !important
+      margin: 5px auto 0 auto !important
+      max-width: 600px !important
     .detail_rate_info_container
-      width: 90%
-      margin: 10px auto auto auto
+      width: 90% !important
+      margin: 10px auto auto auto !important
 .detail_comments_item_container
-  display: flex
-  flex-direction: row
-  padding: 2px
-  height: auto
-  max-height: 250px
-  width: 100%
-  margin: 2px auto 1.5px auto
+  background-color: whitesmoke
+  display: flex !important
+  flex-direction: row !important
+  padding: 2px !important
+  height: auto !important
+  max-height: 250px !important
+  width: 100% !important
+  margin: 2px auto 1.5px auto !important
 @media (max-width: 800px)
   .detail_breadcrumb_container, .detail_pic_rate_container, .detail_intro_container, .detail_comment_container
-    width: 90%
+    width: 90% !important
   .detail_intro_container, .detail_comment_container
-    margin-top: 5px
+    margin-top: 5px !important
   .detail_breadcrumb_container
-    height: 23px
+    height: 23px !important
   .detail_comment_container
-    max-height: 400px
+    max-height: 400px !important
 
 
 

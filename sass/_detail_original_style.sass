@@ -5,7 +5,7 @@
   align-content: center
   cursor: pointer
   span.active
-    color: yellow
+    color: red
 
 .detail_score
   display: flex
@@ -71,6 +71,9 @@
   display: flex
   flex-direction: column
   overflow: auto
+.detail_comment_c1
+  display: flex
+  flex-direction: column
 .detail_comment_c2
   width: calc(100% - 180px)
   display: flex
@@ -86,6 +89,10 @@
   height: 45px
   width: 100%
   margin-left: 5px
+  display: flex
+  flex-direction: row
+  align-items: center
+  align-content: center
 .detail_comment_text
   display: flex
   flex: 1
@@ -98,35 +105,44 @@
   p
     flex: 1
     overflow: hidden
+.detail_comment_rate_star
+  font-size: 20px
+.detail_comment_text
+  font-size: 15px
+  font-family: Arial,serif
+.detail_comment_name
+  font-size: 15px
+  font-family: Arial,serif
+  font-weight: bold
 @media (max-width: 800px)
   .list-group-item.d-flex.justify-content-between.align-items-center.Detail0
-    padding: 1px
-    margin: 0
+    padding: 1px !important
+    margin: 0 !important
     h1
-      font-size: 23px
+      font-size: 23px !important
     h6
-      font-size: 12px
+      font-size: 12px !important
   .detail_rating.Detail0
     span
-      font-size: 28px
+      font-size: 28px !important
   .detail_score.Detail0
     span
-      font-size: 22px
+      font-size: 22px !important
     .detail_yellow_bold
-      font-size: 25px
+      font-size: 25px !important
   .detail_comment_head
-    font-size: 16px
-    margin-top: 0.5%
+    font-size: 16px !important
+    margin-top: 0.5% !important
   .detail_comment_icon
-    margin-right: 10px
-    height: 80px
-    width: 80px
+    margin-right: 10px !important
+    height: 80px !important
+    width: 80px !important
   .detail_comment_name
-    width: 90px
+    width: 90px !important
   .detail_comment_rate
-    height: 30px
+    height: 30px !important
   .detail_comment_c2
-    width: calc(100% - 100px)
+    width: calc(100% - 100px) !important
 
 
 

@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     const attractions = JSON.parse(localStorage.getItem('attractions'));
     console.log(localStorage.getItem("attractions"));
-    var curattraction=attractions[5];
+    var curattraction=attractions[2];
     var ul=document.querySelector(".list-group.Detail0");
     var title=ul.querySelector(".title");
     title.textContent=curattraction['name'];
