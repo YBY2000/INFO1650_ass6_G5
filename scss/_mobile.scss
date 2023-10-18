@@ -1,5 +1,5 @@
 @media (max-width: 800px) {
-    body{
+    body {
         margin-left: 0;
         margin-right: auto;
         margin-top: auto;
@@ -7,27 +7,33 @@
         justify-content: center;
         flex-direction: column;
 
-    }
-    .loginContainer {
-        margin: 100px !important;
-        grid-template-columns: 1fr !important;
-        justify-content: center;
-        img {
-            display: none;
+        .loginContainer {
+            margin: 100px;
+            grid-template-columns: 1fr;
+            justify-content: center;
+
+            img {
+                display: none;
+            }
+
         }
 
     }
 
+
+
     .backButtonContainer {
         margin-left: 100px !important;
         margin-right: auto;
-        
+
     }
-    .form-control{
+
+    .form-control {
         width: auto;
     }
-    .was-validated{
-        .btn{
+
+    .was-validated {
+        .btn {
             width: auto;
         }
     }

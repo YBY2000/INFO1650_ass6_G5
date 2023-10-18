@@ -7,12 +7,12 @@
     justify-content: center;
     flex-direction: column;
   }
-  .loginContainer {
-    margin: 100px !important;
-    grid-template-columns: 1fr !important;
+  body .loginContainer {
+    margin: 100px;
+    grid-template-columns: 1fr;
     justify-content: center;
   }
-  .loginContainer img {
+  body .loginContainer img {
     display: none;
   }
   .backButtonContainer {
