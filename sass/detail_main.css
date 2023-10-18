@@ -108,6 +108,7 @@ textarea.detail_comment_textarea {
   display: flex;
   background-color: white;
   border-radius: 10px;
+  padding-bottom: 5px;
 }
 
 .detail_intro_container {
