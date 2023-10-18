@@ -316,6 +316,10 @@ textarea.detail_comment_textarea {
   align-content: center;
 }
 
+.carousel-indicators.Detail0 {
+  top: 0;
+}
+
 @media (max-width: 800px) {
   .accordion-body.Detail0 {
     font-size: 13px !important;
