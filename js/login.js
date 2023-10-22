@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // 如果验证不通过禁止提交表单
 (function () {
@@ -48,6 +49,17 @@ function handleLogIn() {
     const account = document.getElementById("inputEmail3").value;
     const passcode = document.getElementById("inputPassword3").value;
 
+=======
+var users;
+
+// Define handleLogIn function
+function handleLogIn() {
+    const account = document.getElementById("inputEmail3").value;
+    const passcode = document.getElementById("inputPassword3").value;
+    console.log(account);
+    console.log(passcode);
+    console.log("passcode");
+>>>>>>> 6988b9ba7c572059f4c5f8ea54f77d4ee89bba01
     // users里有用户信息
     // 遍历users，判断是否有匹配的用户
     if (users.some(user => user.account === account && user.passcode === passcode)) {
@@ -59,7 +71,11 @@ function handleLogIn() {
         window.location.href = "test.html";
     } else {
         // 登录失败 显示错误信息
+<<<<<<< HEAD
         appendAlert('Invalid account or password.', 'danger');
+=======
+        alert("Invalid account or password.");
+>>>>>>> 6988b9ba7c572059f4c5f8ea54f77d4ee89bba01
     }
 }
 

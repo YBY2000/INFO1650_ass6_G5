@@ -1,18 +1,31 @@
 @media (max-width: 800px) {
   body {
+<<<<<<< HEAD
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
     display: flex;
+=======
+    margin-left: 0;
+    margin-right: auto;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+>>>>>>> 6988b9ba7c572059f4c5f8ea54f77d4ee89bba01
     flex-direction: column;
   }
   body .loginContainer {
     margin: 100px;
     grid-template-columns: 1fr;
+<<<<<<< HEAD
+=======
+    justify-content: center;
+>>>>>>> 6988b9ba7c572059f4c5f8ea54f77d4ee89bba01
   }
   body .loginContainer img {
     display: none;
   }
+<<<<<<< HEAD
   body .backButtonContainer {
     margin-left: 100px;
     margin-right: auto;
@@ -20,6 +33,12 @@
   h1 {
     font-size: 5vw !important;
   }
+=======
+  .backButtonContainer {
+    margin-left: 100px !important;
+    margin-right: auto;
+  }
+>>>>>>> 6988b9ba7c572059f4c5f8ea54f77d4ee89bba01
   .form-control {
     width: auto;
   }
@@ -63,6 +82,7 @@
 .was-validated .btn {
   margin-top: 10px;
   width: 50%;
+<<<<<<< HEAD
 }
 
 .needs-validation {
@@ -71,6 +91,8 @@
 .needs-validation .btn {
   margin-top: 10px;
   width: 50%;
+=======
+>>>>>>> 6988b9ba7c572059f4c5f8ea54f77d4ee89bba01
 }
 
 .left h1 {
