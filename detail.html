@@ -19,6 +19,8 @@
 </head>
 
 <body class="detail_body">
+
+
     <div class="navbar-zjm">
         <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-light bg-light">
             <div class="container-fluid">
@@ -258,7 +260,25 @@
                 </div>
             </div>
         </div>
-        <div class="detail_comment_container" id="comments" >
+        <div class="detail_comment_container" id="comments">
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">{{'评论title'}}</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            {{'评论内容'}}
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="detail_comment_head">Comments</div>
             <div class="spinner-border" role="status" v-if="loading">
                 <span class="visually-hidden">Loading...</span>
@@ -305,7 +325,8 @@
                         <span data-value="4" class="active">★</span>
                         <span data-value="5">☆</span>
                     </div>
-                    <button type="submit" class="detail_comment_submit" onclick="submitcomment()">Submit</button>
+                    <button type="button" class="detail_comment_submit btn btn-primary" onclick="submitcomment()"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
                 </div>
             </div>
         </div>
