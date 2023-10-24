@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.error("Error fetching attraction data:", error);
             });
     }
-<<<<<<< Updated upstream
 })
 
 var comments_vue = new Vue({
@@ -17,33 +16,18 @@ var comments_vue = new Vue({
     data: {
         attractions: JSON.parse(localStorage.getItem('attractions')),
         comments: JSON.parse(localStorage.getItem('comments')),
-        currentAttractionID: window.location.search.split("=")[1]
+        currentAttractionID: window.location.search.split("=")[1],
+        loading: true
     },
     computed: {
         tarcomments() {
             var result = this.comments.filter(element => element.id === this.currentAttractionID);
             return (result.length > 0 && result[0].reviews) ? result[0].reviews: [];
         }
+    },
+    created() {
+        setTimeout(() => {
+            this.loading = false;
+        },1500)
     }
-=======
-    let comments = JSON.parse(localStorage.getItem("comments"));
-    let tarcomment=[];
-    comments.forEach(function (element) {
-        if (element.id.toString()==attractionID.toString()){
-            tarcomment.push(element);
-        }
-    })
-    console.log(tarcomment);
-    var app = new Vue({
-        el: '#app',
-        data: {
-            attractions: JSON.parse(localStorage.getItem('attractions')),
-            comments:JSON.parse(localStorage.getItem('comments')),
-            tarcomments:tarcomment
-        },
-        mounted: function() {
-            console.log(this.attractions)
-        }
-    })
->>>>>>> Stashed changes
 })
