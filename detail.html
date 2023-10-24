@@ -257,29 +257,30 @@
         </div>
         <div class="detail_comment_container">
             <div class="detail_comment_head">Comments</div>
-            <div class="detail_comment_contents" id="app">
+            <div class="detail_comment_contents" id="comments">
                 <div class="detail_comments_item_container" v-for="comment in tarcomments">
                     <div class="detail_comment_c1">
                         <div class="detail_comment_icon">
-                            <img src="https://www.gravatar.com/avatar/5e5ef472d080ae583e6e3b2ff47e2379?s=200"
+                            <img :src="comment.avatar"
                                 style="height: 80%;width: 80%; margin: 10% 10% 10% 10%">
                         </div>
                         <div class="detail_comment_name" style="margin-left: 8%">
-                            {{comment.reviews[0].reviewer_name}}
+                            {{comment.reviewer_name}}
                         </div>
                     </div>
                     <div class="detail_comment_c2">
+                        <h3>{{comment.review_title}}</h3>
                         <div class="detail_comment_rate">
                             <span v-for="n in 5" :key="n">
-                                <span v-if="n <= comment.reviews[0].star_rating" style="color: orangered"
+                                <span v-if="n <= comment.star_rating" style="color: orangered"
                                     class="detail_comment_rate_star">★</span>
                                 <span v-else class="detail_comment_rate_star">☆</span>
                             </span>
-                            <span class="detail_comment_rate_time"style="margin-left: 20px">2023.10.1</span>
+                            <span class="detail_comment_rate_time"style="margin-left: 20px">{{comment.review_time}}</span>
                         </div>
                         <div class="detail_comment_text">
                             <p>
-                                {{comment.reviews[0].detailed_review}}
+                                {{comment.detailed_review}}
                             </p>
                         </div>
                     </div>
