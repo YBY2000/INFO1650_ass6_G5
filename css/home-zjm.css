@@ -1,6 +1,7 @@
 @charset "UTF-8";
 .navbar-zjm .navbar {
   padding: 0.5rem 1rem;
+  text-align: center;
 }
 .navbar-zjm .navbar .container-fluid .navbar-nav .nav-link {
   color: #007bff;
@@ -26,7 +27,6 @@
 }
 .navbar-zjm .navbar .container-fluid .nav-profile {
   text-align: right;
-  padding-right: 5em;
 }
 .navbar-zjm .navbar .container-fluid .custom-dropdown-profile {
   margin-right: 15em;

@@ -64,6 +64,10 @@ function handleLogIn() {
     }
 }
 
+function handleBack() {
+    window.location.href = "homepage.html";
+}
+
 (async function () {
     try {
         var response = await fetch("../mock/user.json");
