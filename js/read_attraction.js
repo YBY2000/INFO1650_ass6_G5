@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //console.log(window.location.search.split("=")[1])
     const attractions = JSON.parse(localStorage.getItem('attractions'));
     //console.log(localStorage.getItem("attractions"));
-    var curattraction=attractions[attractionID];
+    var curattraction=attractions[attractionID-1];
     var ul=document.querySelector(".list-group.Detail0");
     var title=ul.querySelector(".title");
     title.textContent=curattraction['name'];
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var tels = curattraction['official_tel'].split(" ");
     if (tels.length >= 2) {
         telspan.textContent = "+1 " + tels[0];
-        var node = document.createElement('span');
+        var node = document.createElement('h6');
         node.textContent = "+1 " + tels[1];
         document.querySelector(".detail_list_content.tel").appendChild(node);
     }
