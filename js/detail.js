@@ -25,3 +25,21 @@ stars.forEach(function (element) {
     })
 })
 
+
+// submit button 
+// check if the user has logged in
+// if not, redirect to login page
+// if yes, submit the comment
+var user_info = window.localStorage.getItem("user");
+var new_review = {
+    "review_id": "9",
+    "reviewer_name": user_info.user_name,
+    "reviewer_email": "", // user_info.email
+    "review_title": "Historic Site",// title
+    "review_time": "2018-06-25 08:20:00", // js get time format
+    "star_rating": "4",// star rating
+    "avatar": user_info.avatar,
+    "detailed_review": "" // input
+}
+
+// console.log(JSON.parse(window.localStorage.getItem("comments"))[attraction_id].reviews.push(new_review));

@@ -19,3 +19,7 @@ function handleLogOut() {
   window.localStorage.removeItem("user");
   window.location.reload();
 }
+
+function pageSwitch(id) {
+  window.location.href = 'detail.html?id=' + id;
+}
