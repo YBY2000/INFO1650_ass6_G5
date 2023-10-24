@@ -284,7 +284,7 @@
                 <span class="visually-hidden">Loading...</span>
             </div>
             <div class="detail_comment_contents" v-else>
-                <div class="detail_comments_item_container" v-for="comment in tarcomments">
+                <div class="detail_comments_item_container" v-for="(comment,index) in tarcomments">
                     <div class="detail_comment_c1">
                         <div class="detail_comment_icon">
                             <img :src="comment.avatar" style="height: 80%;width: 80%; margin: 10% 10% 10% 10%">
@@ -294,7 +294,7 @@
                         </div>
                     </div>
                     <div class="detail_comment_c2">
-                        <h3>{{comment.review_title}}</h3>
+                        <h4 class="detail_comment_title">{{comment.review_title}}</h4>
                         <div class="detail_comment_rate">
                             <span v-for="n in 5" :key="n">
                                 <span v-if="n <= comment.star_rating" style="color: orangered"
@@ -302,7 +302,7 @@
                                 <span v-else class="detail_comment_rate_star">☆</span>
                             </span>
                             <span class="detail_comment_rate_time"
-                                style="margin-left: 20px">{{comment.review_time}}</span>
+                                style="margin-left: 20px">{{displayedReviewTime[index]}}</span>
                         </div>
                         <div class="detail_comment_text">
                             <p>
@@ -332,7 +332,8 @@
         </div>
     </div>
 </body>
+<script src="/js/before_vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
-<script src="/js/detail.js"></script>
 <script src="/js/read_attraction.js"></script>
 <script src="/js/read_comments.js"></script>
+<script src="/js/detail.js"></script>

@@ -1,4 +1,5 @@
 
+
 document.addEventListener("DOMContentLoaded", function () {
     var attractionID= window.location.search.split("=")[1];
     // 读取评论数据
@@ -15,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     //console.log(window.location.search.split("=")[1])
     const attractions = JSON.parse(localStorage.getItem('attractions'));
-    //console.log(localStorage.getItem("attractions"));
-    var curattraction=attractions[attractionID-1];
+    console.log(attractions);
+    var curattraction=attractions[parseInt(attractionID)-1];
     var ul=document.querySelector(".list-group.Detail0");
     var title=ul.querySelector(".title");
     title.textContent=curattraction['name'];
