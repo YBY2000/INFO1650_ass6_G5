@@ -11,12 +11,16 @@
     <link rel="icon" href="img/favico.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="sass/detail_main.css">
     <link rel="stylesheet" href="css/home-zjm.css" />
 </head>
 
 <body class="detail_body">
+
+
     <div class="navbar-zjm">
         <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-light bg-light">
             <div class="container-fluid">
@@ -29,7 +33,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mb-2 mb-lg-0 me-1">
                         <li class="nav-item me-5">
-                            <a class="nav-link active fs-5 fw-bold" aria-current="page" href="homepage.html">Homepage</a>
+                            <a class="nav-link active fs-5 fw-bold" aria-current="page"
+                                href="homepage.html">Homepage</a>
                         </li>
                         <li class="nav-item me-5">
                             <a class="nav-link fs-5 fw-bold" href="#">About</a>
@@ -255,14 +260,34 @@
                 </div>
             </div>
         </div>
-        <div class="detail_comment_container">
+        <div class="detail_comment_container" id="comments">
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">{{'评论title'}}</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            {{'评论内容'}}
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="detail_comment_head">Comments</div>
-            <div class="detail_comment_contents" id="comments">
+            <div class="spinner-border" role="status" v-if="loading">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="detail_comment_contents" v-else>
                 <div class="detail_comments_item_container" v-for="comment in tarcomments">
                     <div class="detail_comment_c1">
                         <div class="detail_comment_icon">
-                            <img :src="comment.avatar"
-                                style="height: 80%;width: 80%; margin: 10% 10% 10% 10%">
+                            <img :src="comment.avatar" style="height: 80%;width: 80%; margin: 10% 10% 10% 10%">
                         </div>
                         <div class="detail_comment_name" style="margin-left: 8%">
                             {{comment.reviewer_name}}
@@ -276,7 +301,8 @@
                                     class="detail_comment_rate_star">★</span>
                                 <span v-else class="detail_comment_rate_star">☆</span>
                             </span>
-                            <span class="detail_comment_rate_time"style="margin-left: 20px">{{comment.review_time}}</span>
+                            <span class="detail_comment_rate_time"
+                                style="margin-left: 20px">{{comment.review_time}}</span>
                         </div>
                         <div class="detail_comment_text">
                             <p>
@@ -299,7 +325,8 @@
                         <span data-value="4" class="active">★</span>
                         <span data-value="5">☆</span>
                     </div>
-                    <button type="submit" class="detail_comment_submit" onclick="submitcomment()">Submit</button>
+                    <button type="button" class="detail_comment_submit btn btn-primary" onclick="submitcomment()"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
                 </div>
             </div>
         </div>
