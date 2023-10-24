@@ -1,10 +1,8 @@
+
 document.addEventListener("DOMContentLoaded", function () {
-    let attraction_id = window.location.search.split("=")[1];
-    // 根据id去读attraction数据
-
-
+    var attractionID= window.location.search.split("=")[1];
     // 读取评论数据
-    if (!localStorage.getItem("attractions") || 1 === 1) {
+    if (!localStorage.getItem("attractions")) {
         fetch("/mock/attractions.json")
             .then((response) => response.json())
             .then((data) => {
@@ -13,21 +11,23 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch((error) => {
                 console.error("Error fetching attraction data:", error);
             });
+
     }
+    //console.log(window.location.search.split("=")[1])
     const attractions = JSON.parse(localStorage.getItem('attractions'));
-    // console.log(localStorage.getItem("attractions"));
-    var curattraction = attractions[2];
-    var ul = document.querySelector(".list-group.Detail0");
-    var title = ul.querySelector(".title");
-    title.textContent = curattraction['name'];
-    var rating = curattraction['rating'];
-    // console.log(rating);
-    var stars = document.querySelectorAll(".detail_rating span");
-    var showscorespan = document.querySelector(".detail_score .detail_yellow_bold");
-    for (var i = 1; i <= 5; i++) {
-        if (i <= rating) {
-            stars[i - 1].textContent = '★';
-            stars[i - 1].classList.add('active');
+    //console.log(localStorage.getItem("attractions"));
+    var curattraction=attractions[attractionID];
+    var ul=document.querySelector(".list-group.Detail0");
+    var title=ul.querySelector(".title");
+    title.textContent=curattraction['name'];
+    var rating=curattraction['rating'];
+    //console.log(rating);
+    var stars=document.querySelectorAll(".detail_rating span");
+    var showscorespan=document.querySelector(".detail_score .detail_yellow_bold");
+    for(var i=1;i<=5;i++){
+        if (i<=rating){
+            stars[i-1].textContent='★';
+            stars[i-1].classList.add('active');
         }
         else {
             stars[i - 1].textContent = '☆';

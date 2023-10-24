@@ -11,9 +11,7 @@
     <link rel="icon" href="img/favico.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="sass/detail_main.css">
     <link rel="stylesheet" href="css/home-zjm.css" />
 </head>
@@ -265,9 +263,9 @@
                     <div class="detail_comment_c1">
                         <div class="detail_comment_icon">
                             <img src="https://www.gravatar.com/avatar/5e5ef472d080ae583e6e3b2ff47e2379?s=200"
-                                style="height: 80%;width: 80%; margin: auto auto auto auto">
+                                style="height: 80%;width: 80%; margin: 10% 10% 10% 10%">
                         </div>
-                        <div class="detail_comment_name">
+                        <div class="detail_comment_name" style="margin-left: 8%">
                             {{comment.reviews[0].reviewer_name}}
                         </div>
                     </div>
@@ -278,7 +276,7 @@
                                     class="detail_comment_rate_star">★</span>
                                 <span v-else class="detail_comment_rate_star">☆</span>
                             </span>
-
+                            <span class="detail_comment_rate_time"style="margin-left: 20px">2023.10.1</span>
                         </div>
                         <div class="detail_comment_text">
                             <p>
@@ -308,9 +306,6 @@
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
 <script src="/js/detail.js"></script>
 <script src="/js/read_attraction.js"></script>
 <script src="/js/read_comments.js"></script>
