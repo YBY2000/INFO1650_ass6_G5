@@ -25,7 +25,12 @@
         "description": "The Grand Canyon is one of the world's most famous natural wonders, known for its breathtaking vistas.",
         "detailed_description": "Grand Canyon National Park, located in Arizona, is one of the world's most renowned natural wonders. Carved by the Colorado River over millions of years, the Grand Canyon is known for its breathtaking vistas and awe-inspiring geological formations. Visitors can explore the South Rim and North Rim, hike the numerous trails, or take a helicopter tour to appreciate the sheer magnitude of this natural wonder. The park also offers opportunities for camping, stargazing, and experiencing the rich Native American cultural history of the region.",
         "type": "National Park",
-        "image": "https://media.istockphoto.com/id/104144229/photo/grand-canyon-landscape-at-dusk-viewed-from-desert.jpg?s=612x612&w=0&k=20&c=HKTu6qG4DvB9-q-XQ9WyWGxXW5yVbYtDjj5bzbsVFuU=",
+        "image": [
+            "https://media.istockphoto.com/id/104144229/photo/grand-canyon-landscape-at-dusk-viewed-from-desert.jpg?s=612x612&w=0&k=20&c=HKTu6qG4DvB9-q-XQ9WyWGxXW5yVbYtDjj5bzbsVFuU=",
+            "https://images.unsplash.com/photo-1681952222055-8cae54e1e7e9?auto=format&fit=crop&q=80&w=2670&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://plus.unsplash.com/premium_photo-1669050701110-a5eb879f1b6a?auto=format&fit=crop&q=80&w=2670&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://plus.unsplash.com/premium_photo-1672688161313-24499793f73a?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Z3JhbmQlMjBjYW55b24lMjBuYXRpb25hbCUyMHBhcmt8ZW58MHx8MHx8fDA%3D"
+        ],
         "website": "https://www.nps.gov/grca/index.htm",
         "official_tel": "928-638-7888",
         "rating": 4.9,
@@ -40,7 +45,11 @@
         "description": "Walt Disney World Resort is a magical destination featuring theme parks, resorts, and entertainment.",
         "detailed_description": "Walt Disney World Resort, located in Orlando, Florida, is a magical destination that offers visitors an enchanting experience. It includes four major theme parks: Magic Kingdom, Epcot, Disney's Hollywood Studios, and Disney's Animal Kingdom, along with water parks and numerous resorts. The resort offers a wide range of attractions, entertainment, and dining options for guests of all ages. It's a place where dreams come to life, and visitors can immerse themselves in the world of Disney magic.",
         "type": "Theme Park",
-        "image": "https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/orlandofl/8731_castle_landing_page_image_nu_2a8f8e6a-a1f9-45fd-8eca-596c92d04a7c.jpg",
+        "image": [
+            "https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/orlandofl/8731_castle_landing_page_image_nu_2a8f8e6a-a1f9-45fd-8eca-596c92d04a7c.jpg",
+            "https://images.unsplash.com/photo-1590144662036-33bf0ebd2c7f?auto=format&fit=crop&q=80&w=2574&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1596984654008-265576e74834?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fFdhbHQlMjBEaXNuZXklMjBXb3JsZCUyMFJlc29ydHxlbnwwfHwwfHx8MA%3D%3D"
+        ],
         "website": "https://disneyworld.disney.go.com/",
         "official_tel": "407-939-5277",
         "rating": 4.7,
@@ -55,7 +64,11 @@
         "description": "Yellowstone is America's first national park, renowned for its geothermal wonders and wildlife.",
         "detailed_description": "Yellowstone National Park, spanning parts of Wyoming, Montana, and Idaho, is America's first national park and a natural wonderland. It's known for its geothermal wonders, including Old Faithful geyser, as well as diverse wildlife like bison, grizzly bears, and wolves. Visitors can explore the park's unique geothermal features, pristine lakes, and numerous hiking trails. Yellowstone offers a truly immersive experience in the heart of the American wilderness.",
         "type": "National Park",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Grand_Canyon_of_yellowstone.jpg",
+        "image": [
+            "https://upload.wikimedia.org/wikipedia/commons/7/73/Grand_Canyon_of_yellowstone.jpg",
+            "https://images.pexels.com/photos/2416600/pexels-photo-2416600.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/534398/pexels-photo-534398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        ],
         "website": "https://www.nps.gov/yell/index.htm",
         "official_tel": "307-344-7381",
         "rating": 4.6,
@@ -70,7 +83,10 @@
         "description": "The White House is the official residence and workplace of the President of the United States.",
         "detailed_description": "The White House, located at 1600 Pennsylvania Avenue NW in Washington, D.C., is the official residence and workplace of the President of the United States. Designed by James Hoban, it has been the residence of every U.S. president since John Adams. Visitors can take guided tours of the historic building, exploring its iconic rooms and learning about its rich history. The White House serves as a symbol of American democracy and is an integral part of the nation's history.",
         "type": "Historical Landmark",
-        "image": "https://www.whitehouse.gov/wp-content/uploads/2021/01/about_the_white_house.jpg",
+        "image": [
+            "https://www.whitehouse.gov/wp-content/uploads/2021/01/about_the_white_house.jpg",
+            "https://images.pexels.com/photos/7017154/pexels-photo-7017154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        ],
         "website": "https://www.whitehouse.gov/",
         "official_tel": "202-456-1111",
         "rating": 4.5,
