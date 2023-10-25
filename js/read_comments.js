@@ -51,7 +51,7 @@ var comments_vue = new Vue({
 
         displayedReviewTime() {
             timelist = []
-            for (let comment of this.tarcomments) {
+            for (let comment of this.slicecomments) {
 
                 if (this.windowWidth > 800) {
                     timelist.push(comment.review_time);
@@ -89,7 +89,7 @@ var comments_vue = new Vue({
         // if not, redirect to login page
         // if yes, submit the comment
         handleSubmit() {
-            if(!this.user){
+            if(Object.keys(this.user).length === 0){
                 alert("Please login first!");
                 window.location.href = "login.html";
             }
@@ -97,7 +97,7 @@ var comments_vue = new Vue({
             var st_rating = starvalue.toString();
             var new_review = {
                 "review_id": "999",
-                "reviewer_name": this.user.name,
+                "reviewer_name": this.user.user_name,
                 "reviewer_email": this.user.account, // user_info.email
                 "review_title": this.form.review_title,
                 "review_time": time, // js get time format

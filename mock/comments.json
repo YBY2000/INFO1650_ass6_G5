@@ -62,6 +62,46 @@
                 "star_rating": "4",
                 "avatar": "https://www.gravatar.com/avatar/5e5ef472d080ae583e6e3b2ff47e2379?s=200",
                 "detailed_review": "The Grand Canyon is truly awe-inspiring. My visit to the South Rim allowed me to witness the vastness of this natural wonder. I hiked along the rim trails and was captivated by the ever-changing colors and rock formations. The sunset views were breathtaking. The only reason I didn't give it five stars is that some areas were crowded with tourists."
+            },
+            {
+                "review_id": "2",
+                "reviewer_name": "Yun Ma",
+                "reviewer_email": "",
+                "review_title": "Awe-Inspiring",
+                "review_time": "2019-05-15 12:30:00",
+                "star_rating": "4",
+                "avatar": "https://media.istockphoto.com/id/1433039224/photo/blue-user-3d-icon-person-profile-concept-isolated-on-white-background-with-social-member.webp?s=2048x2048&w=is&k=20&c=4kYlrBEQrLWS--wVUBYiNnMCX6psXAFLuTnARiJotiM=",
+                "detailed_review": "The Grand Canyon is truly awe-inspiring. My visit to the South Rim allowed me to witness the vastness of this natural wonder. I hiked along the rim trails and was captivated by the ever-changing colors and rock formations. The sunset views were breathtaking. The only reason I didn't give it five stars is that some areas were crowded with tourists."
+            },
+            {
+                "review_id": "3",
+                "reviewer_name": "Bob Martin",
+                "reviewer_email": "",
+                "review_title": "Unforgettable Experience",
+                "review_time": "2019-06-10 10:45:00",
+                "star_rating": "5",
+                "avatar": "https://media.istockphoto.com/id/1364105164/photo/hologram-human-head-deep-learning-and-artificial-intelligence-abstract-background.webp?s=2048x2048&w=is&k=20&c=SLWe2u1zeCyZwUq6klqq-F8UUQUrGOOO3GAbSg_r_2s=",
+                "detailed_review": "Visiting the Grand Canyon was a bucket list item for me. The vast landscapes, the serene environment, and the overall ambiance is just breathtaking. I'd recommend everyone to visit at least once in their lifetime."
+            },
+            {
+                "review_id": "4",
+                "reviewer_name": "Catherine Johnson",
+                "reviewer_email": "",
+                "review_title": "Mesmerizing Views",
+                "review_time": "2019-07-12 15:20:00",
+                "star_rating": "5",
+                "avatar": "https://plus.unsplash.com/premium_photo-1683842189051-19fc4188df7d?auto=format&fit=crop&q=80&w=2670&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "detailed_review": "The views from the North Rim were just out of this world. Less crowded and more intimate experience. The Grand Canyon is nature's masterpiece, and every corner offers a different spectacle."
+            },
+            {
+                "review_id": "5",
+                "reviewer_name": "David Wilson",
+                "reviewer_email": "",
+                "review_title": "Spectacular But Crowded",
+                "review_time": "2019-08-05 09:30:00",
+                "star_rating": "4",
+                "avatar": "https://media.istockphoto.com/id/1369717930/photo/cartoon-light-bulb.jpg?s=1024x1024&w=is&k=20&c=pwldxGXuJtrgh4JnSRD66C5HoQbdi0gOB_qVByt8dPo=",
+                "detailed_review": "The Grand Canyon is, without doubt, a must-visit. However, I found some spots too crowded, which took away a bit from the experience. Still, the sheer beauty of the place is undeniable."
             }
         ]
     },
