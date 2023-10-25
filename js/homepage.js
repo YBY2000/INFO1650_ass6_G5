@@ -1,5 +1,5 @@
 
-if (!localStorage.getItem("attractions") || 1===1) {
+if (!localStorage.getItem("attractions")) {
     fetch("/mock/attractions.json")
         .then((response) => response.json())
         .then((data) => {
@@ -8,29 +8,47 @@ if (!localStorage.getItem("attractions") || 1===1) {
         .catch((error) => {
             console.error("Error fetching attraction data:", error);
         });
-  }
-  let attractions = JSON.parse(localStorage.getItem("attractions"));
+}
 
-  var myApp = new Vue({
-      el: '#myApp',
-      data: {
-          attractions: JSON.parse(localStorage.getItem('attractions')),
-      },
-      mounted: function() {
-          console.log(this.attractions)
-      }
-  })
+var myApp = new Vue({
+    el: '#app',
+    data: {
+        attractions: JSON.parse(localStorage.getItem('attractions')),
+        isLoggedIn: window.localStorage.getItem("user") ? true : false,
+        user: window.localStorage.getItem("user") ? JSON.parse(window.localStorage.getItem("user")) : null,
+        title: '',
+        lazyloading: true
+    },
+    computed: {
+        filteredAttractions: function () {
+            return this.attractions.filter((attraction) => {
+                return attraction.name.toLowerCase().includes(this.title.toLowerCase());
+            });
+        }
+    },
+    methods: {
+        pageSwitch(id) {
+            window.location.href = 'detail.html?id=' + id;
+        },
+        handleSearch() {
+            this.title = document.getElementById("searchInput").value;
+            this.lazyloading = true;
+            this.handleLazyLoading();
+        },
+        handleLazyLoading() {
+            setTimeout(() => {
+                this.lazyloading = false;
+            }, 1000);
+        }
+    },
 
-
-
-  window.onload=function displayContent(){
-    let placeholders = document.getElementsByClassName("card-placeholder");
-    let myCards = document.getElementsByClassName("my-card");
-    console.log(placeholders.length);
-    setTimeout(function(){
-      for (let index = 0; index < placeholders.length; index++) {
-      myCards[index].style.display = "block";
-      placeholders[index].style.display = "none";
+    created() {
+        this.handleLazyLoading();
     }
-    }, 3000);
-  }
+})
+
+function handleLogOut() {
+    window.localStorage.removeItem("user");
+    window.location.href = 'login.html';
+}
+

@@ -11,6 +11,3 @@ function handleLogOut() {
   window.location.href = 'login.html';
 }
 
-function pageSwitch(id) {
-  window.location.href = 'detail.html?id=' + id;
-}
