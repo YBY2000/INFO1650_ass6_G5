@@ -158,10 +158,12 @@
         <div v-for="attraction in filteredAttractions">
           <!-- card -->
           <div class="card my-card" @click="pageSwitch(attraction.id)" v-if="!lazyloading">
-            <img class="card-img" :src="attraction.image" :alt="attraction.name">
-            <div class="card-intro-area">
-              <p class="card-title">{{attraction.name}}</p>
-              <p class="card-text">{{attraction.description}}</p>
+            <div class="card-img-container">
+              <img class="card-img" :src="attraction.image" :alt="attraction.name">
+              <div class="card-intro-area">
+                <p class="card-title">{{attraction.name}}</p>
+                <p class="card-text">{{attraction.description}}</p>
+              </div>
             </div>
           </div>
 

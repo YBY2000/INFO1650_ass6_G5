@@ -16,6 +16,10 @@ body {
     grid-gap: 50px;
 }
 
+.card-img-container {
+    height: 300px;
+}
+
 .card-img {
     height: 300px;
 }
@@ -55,12 +59,15 @@ body {
     top: -25px;
 }
 
-.footer_info {
-    position: relative;
-    bottom: 0;
-    // background-color: $card-title-bg-color;
+
+footer {
+    padding: 15px;
+    height: 50px;
+    background-color: $footer_color;
+    color: $my_blue;
     text-align: center;
-}
+    font-size: smaller;
+  }
 
 
 @media only screen and (max-width: 1300px) {
