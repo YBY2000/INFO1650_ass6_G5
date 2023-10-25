@@ -298,15 +298,15 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">{{'评论title'}}</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">{{form.review_title}}</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            {{'评论内容'}}
+                            {{form.review_content}}
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" @click="handleSubmit">Save changes</button>
                         </div>
                     </div>
                 </div>
@@ -346,9 +346,9 @@
             </div>
             <div class="detail_comment_input">
                 <div class="detail_comment_input_text_container">
-                    <textarea style="resize: none" class="detail_comment_textarea_title" name="comment_input"
+                    <textarea style="resize: none" class="detail_comment_textarea_title" name="comment_input" v-model="form.review_title"
                         placeholder="Comment Title"></textarea>
-                    <textarea style="resize: none" class="detail_comment_textarea" name="comment_input"
+                    <textarea style="resize: none" class="detail_comment_textarea" name="comment_input" v-model="form.review_content"
                         placeholder="Leave your comments here"></textarea>
                 </div>
                 <div class="detail_comment_input_rate_button_container">
@@ -359,7 +359,7 @@
                         <span data-value="4" class="active">★</span>
                         <span data-value="5">☆</span>
                     </div>
-                    <button type="button" class="detail_comment_submit btn btn-primary" onclick="submitcomment()"
+                    <button type="button" class="detail_comment_submit btn btn-primary"
                         data-bs-toggle="modal" data-bs-target="#exampleModal" style="text-align: center;padding: 0 0 0 0">Submit</button>
                 </div>
             </div>

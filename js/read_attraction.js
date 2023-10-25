@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const attractions = JSON.parse(localStorage.getItem('attractions'));
     console.log(attractions);
     var curattraction=attractions[parseInt(attractionID)-1];
-    var ul=document.querySelector(".list-group.Detail0");
+    var ul=document.querySelector(".list-group");
     var title=ul.querySelector(".title");
     title.textContent=curattraction['name'];
     var rating=curattraction['rating'];
