@@ -1,13 +1,9 @@
-const allElements = document.body.getElementsByTagName('*');
-for (let element of allElements) {
-    element.classList.add('Detail0');
-}
-
 var screenWidth = screen.width;
 var detailbody=document.querySelector(".detail_main_container");
 //detailbody.style.setProperty('--screenwith',screenWidth+'px');
-var starvalue;
+var starvalue=4;
 stars=document.querySelectorAll(".detail_input_start_container span")
+console.log(stars);
 stars.forEach(function (element) {
     element.addEventListener('mouseover',function (event) {
         var value=event.target.getAttribute('data-value');
@@ -52,19 +48,31 @@ function submitcomment(){
     var id=(comments.length+1).toString();
     if(window.localStorage.getItem("user")){
         var user=JSON.parse(localStorage.getItem("user"))
-        name=user.user;
-
+        name=user.user_name;
+        email=user.account;
+        avatar=user.avatar;
     }
+    var attractionID= window.location.search.split("=")[1];
+    var curattracttion=JSON.parse(localStorage.getItem("attractions"))[attractionID-1];
+    var new_review = {
+        "review_id": id,
+        "reviewer_name": name,
+        "reviewer_email": email, // user_info.email
+        "review_title": document.querySelector(".detail_comment_textarea_title").value.toString(),// title
+        "review_time": time, // js get time format
+        "star_rating": st_rating,// star rating
+        "avatar": avatar,
+        "detailed_review": document.querySelector(".detail_comment_textarea").value.toString()
+    }
+    var newcomment={
+        "id": attractionID,
+        "name": curattracttion.name,
+        "reviews":[new_review]
+    }
+    comments.push(newcomment);
+    comments_vue.updateLocalStorage(comments);
+    console.log(JSON.parse(window.localStorage.getItem("comments")));
 }
-var new_review = {
-    "review_id": "9",
-    "reviewer_name": user_info.user_name,
-    "reviewer_email": "", // user_info.email
-    "review_title": "Historic Site",// title
-    "review_time": "2018-06-25 08:20:00", // js get time format
-    "star_rating": "4",// star rating
-    "avatar": user_info.avatar,
-    "detailed_review": "" // input
-}
+
 
 // console.log(JSON.parse(window.localStorage.getItem("comments"))[attraction_id].reviews.push(new_review));
