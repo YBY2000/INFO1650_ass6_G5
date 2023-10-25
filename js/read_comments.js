@@ -20,6 +20,7 @@ var comments_vue = new Vue({
         window.removeEventListener('resize', this.handleResize);
     },
     data: {
+        startindex:0,
         windowWidth: window.innerWidth,
         attractions: JSON.parse(localStorage.getItem('attractions')),
         comments: JSON.parse(localStorage.getItem('comments')),
@@ -32,10 +33,22 @@ var comments_vue = new Vue({
         user: JSON.parse(localStorage.getItem("user")) ? JSON.parse(localStorage.getItem("user")) : {}
     },
     computed: {
+
+        PreviousDisabled(){
+            return this.startindex===0;
+        },
         tarcomments() {
             let result = this.comments.filter(element => element.id === this.currentAttractionID);
             return (result.length > 0 && result[0].reviews) ? result[0].reviews: [];
         },
+        slicecomments(){
+            return this.tarcomments.slice(this.startindex,this.startindex+4);
+        },
+        NextDisabled(){
+            return this.startindex===Math.ceil(this.tarcomments.length/4.0-1.0)*4;
+        }
+        ,
+
         displayedReviewTime() {
             timelist = []
             for (let comment of this.tarcomments) {
@@ -68,6 +81,9 @@ var comments_vue = new Vue({
             let formattedDate = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')} ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
             return formattedDate;
         },
+        isCurrentPage(num){
+            return (num-1)*4===this.startindex;
+        },
         // submit button 
         // check if the user has logged in
         // if not, redirect to login page
@@ -91,8 +107,10 @@ var comments_vue = new Vue({
             }
             this.comments[this.currentAttractionID-1].reviews.push(new_review);
             this.updateLocalStorage(this.comments);
+        },
+        handlePagnitionClick(num){
+            this.startindex=(num-1)*4;
         }
-
     },
     created() {
         setTimeout(() => {

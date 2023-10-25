@@ -316,7 +316,7 @@
                 <span class="visually-hidden">Loading...</span>
             </div>
             <div class="detail_comment_contents" v-else>
-                <div class="detail_comments_item_container" v-for="(comment,index) in tarcomments">
+                <div class="detail_comments_item_container" v-for="(comment,index) in slicecomments">
                     <div class="detail_comment_c1">
                         <div class="detail_comment_icon">
                             <img :src="comment.avatar" style="height: 80%;width: 80%; margin: 10% 10% 10% 10%">
@@ -343,6 +343,21 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="detail_pagination_container">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item" :class="{'disabled': PreviousDisabled }">
+                            <a class="page-link" @click.prevent="handlePagnitionClick(startindex/4)">Previous</a>
+                        </li>
+                        <li class="page-item" :class="{'current' : isCurrentPage(num)}" v-for="num in Math.ceil(tarcomments.length/4)">
+                            <a class="page-link" @click.prevent="handlePagnitionClick(num)">{{num}}</a>
+                        </li>
+                        <li class="page-item":class="{'disabled': NextDisabled }">
+                            <a class="page-link" @click.prevent="handlePagnitionClick(startindex/4+2)">Next</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
             <div class="detail_comment_input">
                 <div class="detail_comment_input_text_container">

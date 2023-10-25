@@ -1,3 +1,7 @@
+body.detail_body .detail_pagination_container {
+  border: solid 0px black;
+  border-radius: 4px;
+}
 body.detail_body .detail_main_container {
   border: solid 0px black;
   border-radius: 4px;
@@ -196,6 +200,12 @@ textarea.detail_comment_textarea {
   margin: 2px auto 8px auto;
 }
 
+.detail_pagination_container {
+  width: 90%;
+  height: 45px;
+  margin: 2px auto 2px auto;
+}
+
 @media (max-width: 1300px) {
   .detail_intro_container, .detail_comment_container {
     margin-top: 15px !important;
@@ -326,6 +336,10 @@ textarea.detail_comment_textarea {
 
 .spinner-border.Detail0 {
   margin: 0 auto 10px 5%;
+}
+
+.page-item.current a {
+  background-color: gray;
 }
 
 @media (max-width: 800px) {
