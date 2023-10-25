@@ -57,7 +57,7 @@ function handleLogIn() {
         localStorage.setItem("user", JSON.stringify(users.find(user => user.account === account && user.passcode === passcode)));
         // 页面跳转
         // window.location.href = "./home.html";
-        window.location.href = "test.html";
+        window.location.href = "homepage.html";
     } else {
         // 登录失败 显示错误信息
         appendAlert('Invalid account or password.', 'danger');
