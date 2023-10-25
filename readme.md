@@ -5,6 +5,9 @@
 </div>
 
 ## Introduce to This Project
+The WeTours Web Application is designed to help users discover and explore various attractions. It provides detailed information about different locations, allowing users to filter and search for destinations based on their preferences. Users can also login to view personalized content.
+
+
 ### Purpose of the website
 
 
@@ -39,6 +42,94 @@ This file aggregates all the style in sass files mentioned above.
 
 
 ## Bootstrap Component been Used
+### Home Page
+
+# WeTours - README
+
+## Table of Contents
+
+1. Introduction
+2. Setup
+3. File Structure
+4. Technologies Used
+5. Bootstrap Components
+
+---
+
+## Introduction
+
+WeTours is a travel and tourism website that allows users to explore various attractions. The platform is built using HTML, CSS, and Vue.js, along with Bootstrap for styling and component design.
+
+---
+
+## Setup
+
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Open the `homepage.html` file in your browser.
+
+---
+
+## File Structure
+
+```
+WeTours/
+├── css/
+│   ├── homepage.css
+│   └── home-zjm.css
+├── js/
+│   └── homepage.js
+├── img/
+│   └── favicon(1).png
+└── homepage.html
+```
+
+---
+
+## Technologies Used
+
+- HTML
+- CSS
+- Vue.js
+- Bootstrap
+
+---
+
+## Bootstrap Components
+
+### Bootstrap Version: 5.3.2
+
+#### Used Components:
+
+1. **Navbar**: 
+   - File: `homepage.html`
+   - Purpose: For main navigation.
+
+2. **Dropdown**:
+   - File: `homepage.html`
+   - Purpose: For additional menu options in the navbar.
+
+3. **Form Control**:
+   - File: `homepage.html`
+   - Purpose: For the search input box.
+
+4. **Buttons**:
+   - File: `homepage.html`
+   - Purpose: For various action buttons like Search, LOGIN/SIGNUP, etc.
+
+5. **Alert**:
+   - File: `homepage.html`
+   - Purpose: To show important alerts under the Navbar.
+
+6. **Spinner**:
+   - File: `homepage.html`
+   - Purpose: As a loading indicator for lazy-loaded content.
+
+7. **Card**:
+   - File: `homepage.html`
+   - Purpose: To display attractions.
+
+
 ### Detail Page
 1. Accordion  
 This component is used for showing and hide detail introduction to an attraction.
