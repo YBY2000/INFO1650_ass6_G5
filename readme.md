@@ -42,62 +42,8 @@ This file aggregates all the style in sass files mentioned above.
 
 
 ## Bootstrap Component been Used
+
 ### Home Page
-
-# WeTours - README
-
-## Table of Contents
-
-1. Introduction
-2. Setup
-3. File Structure
-4. Technologies Used
-5. Bootstrap Components
-
----
-
-## Introduction
-
-WeTours is a travel and tourism website that allows users to explore various attractions. The platform is built using HTML, CSS, and Vue.js, along with Bootstrap for styling and component design.
-
----
-
-## Setup
-
-1. Clone the repository.
-2. Navigate to the project directory.
-3. Open the `homepage.html` file in your browser.
-
----
-
-## File Structure
-
-```
-WeTours/
-├── css/
-│   ├── homepage.css
-│   └── home-zjm.css
-├── js/
-│   └── homepage.js
-├── img/
-│   └── favicon(1).png
-└── homepage.html
-```
-
----
-
-## Technologies Used
-
-- HTML
-- CSS
-- Vue.js
-- Bootstrap
-
----
-
-## Bootstrap Components
-
-### Bootstrap Version: 5.3.2
 
 #### Used Components:
 
