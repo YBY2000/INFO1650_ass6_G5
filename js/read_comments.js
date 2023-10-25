@@ -92,6 +92,7 @@ var comments_vue = new Vue({
             if(Object.keys(this.user).length === 0){
                 alert("Please login first!");
                 window.location.href = "login.html";
+                return;
             }
             var time = this.getTime();
             var st_rating = starvalue.toString();
