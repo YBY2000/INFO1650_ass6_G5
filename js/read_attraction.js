@@ -60,3 +60,30 @@ document.addEventListener("DOMContentLoaded", function () {
     tips.textContent = curattraction['tips'];
 
 });
+var carousel_vue = new Vue({
+    el: '#attraction_vue',
+    data:{
+        currentAttractionID: window.location.search.split("=")[1],
+        attractions: localStorage.getItem('attractions')? JSON.parse(localStorage.getItem('attractions')):""
+    },
+    computed:{
+        imagenum(){
+            if(Array.isArray(this.attractions[parseInt(this.currentAttractionID)-1].image)){
+                return this.attractions[parseInt(this.currentAttractionID)-1].image.length
+            }
+            else{
+                return 1
+            }
+        }
+    },
+    methods:{
+        Getimage(num){
+            if(Array.isArray(this.attractions[parseInt(this.currentAttractionID)-1].image)){
+                return this.attractions[parseInt(this.currentAttractionID)-1].image[num-1];
+            }
+            else{
+                return this.attractions[parseInt(this.currentAttractionID)-1].image;
+            }
+        }
+    }
+})

@@ -39,9 +39,16 @@ var myApp = new Vue({
             setTimeout(() => {
                 this.lazyloading = false;
             }, 1000);
+        },
+        Getimage(attraction){
+            if(Array.isArray(attraction.image)){
+                return attraction.image[0];
+            }
+            else{
+                return attraction.image
+            }
         }
     },
-
     created() {
         this.handleLazyLoading();
     }
