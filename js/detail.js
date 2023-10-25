@@ -58,7 +58,7 @@ function submitcomment(){
         "review_id": id,
         "reviewer_name": name,
         "reviewer_email": email, // user_info.email
-        "review_title": "default title",// title
+        "review_title": document.querySelector(".detail_comment_textarea_title").value.toString(),// title
         "review_time": time, // js get time format
         "star_rating": st_rating,// star rating
         "avatar": avatar,
