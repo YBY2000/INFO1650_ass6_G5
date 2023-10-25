@@ -1,0 +1,163 @@
+$primary-color: #007bff;
+$hover-color: #0056b3;
+$disabled-color: #ccc;
+$bg-hover: #f1f1f1;
+
+.navbar-zjm {
+  .navbar {
+    padding: 0.5rem 1rem;
+
+    .container-fluid {
+      .navbar-nav {
+        .nav-link {
+          color: $primary-color;
+
+          &:hover {
+            color: $hover-color;
+          }
+
+          &.active {
+            color: $hover-color;
+          }
+
+          &.disabled {
+            color: $disabled-color;
+          }
+        }
+
+        .dropdown-menu {
+          border-radius: 0;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+          .dropdown-item {
+            color: $primary-color;
+
+            &:hover {
+              background-color: $bg-hover;
+            }
+          }
+        }
+      }
+
+      .nav-profile {
+        text-align: right;
+      }
+
+      .custom-dropdown-profile {
+        margin-right: 15em;
+      }
+    }
+  }
+}
+
+.dropdown-item-avatar {
+  width: max-content;
+  padding: 10px 25px;
+}
+
+//1163-990
+/* 自定义媒体查询，用于1160-990px屏幕尺寸 */
+@media (max-width: 1160px) and (min-width: 990px) {
+  /* 在这里添加您想要更改的样式 */
+
+  /* 例如：将导航栏切换为堆叠模式 */
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: column !important;
+  }
+
+  /* 更多自定义样式... */
+}
+
+/* 当视口小于1100px时 */
+// @media (max-width: 1100px) {
+//   /* 显示切换按钮 */
+//   .navbar-expand-lg .navbar-toggler {
+//     display: block;
+//   }
+
+//   /* 隐藏导航内容 */
+//   .navbar-expand-lg .navbar-collapse {
+//     display: none;
+//   }
+
+//   /* 如果导航内容被打开（has class 'show'），则显示内容 */
+//   .navbar-expand-lg .navbar-collapse.show {
+//     display: block !important;
+//   }
+// }
+
+@media (max-width: 991px) {
+  .input-group {
+    margin-bottom: 15px !important;
+  }
+  /* Small to medium devices (tablets, less than 992px) */
+  .navbar .navbar-collapse {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar .navbar-collapse form.d-flex {
+    width: 100%;
+    margin-right: 2rem;
+    margin-top: 1rem;
+  }
+  .navbar-zjm .navbar .container-fluid .nav-profile {
+    text-align: left;
+  }
+}
+@media (min-width: 992px) {
+  /* Large devices (desktops, 992px and up) */
+  .navbar .navbar-collapse {
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar .navbar-collapse .custom-dropdown-profile {
+    right: 10;
+    left: unset;
+  }
+}
+
+/* 使下拉列表与输入框对齐 */
+.input-group {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+/* 当输入框聚焦时显示下拉列表 */
+.search-form:focus ~ .dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
+}
+
+//search-dropdown
+/* Desktop */
+@media (min-width: 992px) {
+  #dropdown.wide-dropdown-menu {
+    width: 280px; /* Or whatever width you desire */
+  }
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+  #dropdown.wide-dropdown-menu {
+    width: 100%; /* Take up the full width of the parent container */
+  }
+}
