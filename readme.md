@@ -69,6 +69,42 @@ This SCSS file is designed to adjust the styles when the viewport width is 800px
 
 ### Login Page (File: login.html)
 
+1. **Form with Validation**: Bootstrap's form and validation classes combined with HTML5 attributes enrich the user input experience with clear feedback on the validity of their inputs.
+   ```html
+   <form class="needs-validation" novalidate> ... </form>
+   ```
+
+2. **Form with  Layout**: Utilizing Bootstrap's layout classes, the design achieves a responsive and aesthetically pleasing alignment and distribution of elements.
+   ```html
+   <div class="mb-3">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail3" placeholder="xxx@xx.xxx" required
+         pattern="^[a-zA-Z0-9._\\u002D]+@[a-zA-Z0-9._\\u002D]+\.[a-zA-Z]+">
+   </div>
+   ```
+
+3. **Input Fields**: Designed with Bootstrap classes to ensure a cohesive visual style.
+   ```html
+   <input type="email" class="form-control" ... >
+   <input type="password" class="form-control" ... >
+   ```
+
+4. **Buttons**: Adopting Bootstrap's button classes for user actions.
+   ```html
+   <button type="submit" class="btn btn-primary">Log in</button>
+   ```
+
+5. **SVG Icon**: An icon integrated from Bootstrap's icon library utilized for the back button.
+   ```html
+   <svg xmlns="http://www.w3.org/2000/svg" ... class="bi bi-arrow-left-short" ... ></svg>
+   ```
+
+6. **Alert**: This dynamic component is used to convey messages to users, such as login errors.
+   ```javascript
+   const wrapper = document.createElement('div');
+   wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">...</div>';
+   ```
+
 
 ### Home Page (File: homepage.html)
 1. **Navbar**: 
@@ -119,40 +155,3 @@ This component is used for showing basic information of the attraction.
 8. **Spinners**  
    This component is used for creating a waiting animation when comments are  being loaded.
 
-### Login Page (File: login.html)
-
-1. **Form with Validation**: Bootstrap's form and validation classes combined with HTML5 attributes enrich the user input experience with clear feedback on the validity of their inputs.
-   ```html
-   <form class="needs-validation" novalidate> ... </form>
-   ```
-
-2. **Form with  Layout**: Utilizing Bootstrap's layout classes, the design achieves a responsive and aesthetically pleasing alignment and distribution of elements.
-   ```html
-   <div class="mb-3">
-      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-      <input type="email" class="form-control" id="inputEmail3" placeholder="xxx@xx.xxx" required
-         pattern="^[a-zA-Z0-9._\\u002D]+@[a-zA-Z0-9._\\u002D]+\.[a-zA-Z]+">
-   </div>
-   ```
-
-3. **Input Fields**: Designed with Bootstrap classes to ensure a cohesive visual style.
-   ```html
-   <input type="email" class="form-control" ... >
-   <input type="password" class="form-control" ... >
-   ```
-
-4. **Buttons**: Adopting Bootstrap's button classes for user actions.
-   ```html
-   <button type="submit" class="btn btn-primary">Log in</button>
-   ```
-
-5. **SVG Icon**: An icon integrated from Bootstrap's icon library utilized for the back button.
-   ```html
-   <svg xmlns="http://www.w3.org/2000/svg" ... class="bi bi-arrow-left-short" ... ></svg>
-   ```
-
-6. **Alert**: This dynamic component is used to convey messages to users, such as login errors.
-   ```javascript
-   const wrapper = document.createElement('div');
-   wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">...</div>';
-   ```
