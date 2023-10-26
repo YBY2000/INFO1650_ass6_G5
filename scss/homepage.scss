@@ -59,10 +59,21 @@ body {
     top: -25px;
 }
 
+html, body {
+    height: 100%;
+}
+
+#app {
+    min-height: 100%;
+    display: flex; 
+    flex-direction: column;
+}
 
 footer {
     padding: 15px;
+    width: 100%;
     height: 50px;
+    margin-top: auto;
     background-color: $footer_color;
     color: $my_blue;
     text-align: center;
