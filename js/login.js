@@ -7,15 +7,7 @@
         var forms = document.getElementsByClassName('needs-validation');
         // 循环并禁止提交
         var validation = Array.prototype.filter.call(forms, function (form) {
-            // 获取表单内的所有输入元素
-            var inputs = form.getElementsByTagName('input');
-            for (var i = 0; i < inputs.length; i++) {
-                // 为每个输入元素添加input事件监听器
-                inputs[i].addEventListener('input', function () {
-                    // 如果输入无效，则添加was-validated类，这将触发Bootstrap的验证样式
-                    form.classList.add('was-validated');
-                });
-            }
+            
             form.addEventListener('submit', function (event) {
                 if (form.checkValidity() === false) {
                     event.preventDefault();

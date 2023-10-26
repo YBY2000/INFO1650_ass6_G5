@@ -11,6 +11,7 @@ The WeTours Web Application is designed to help users discover and explore vario
 ### Introduce to the website
    This website contains 3 main pages, Login page, Homepage, Detail page.
 #### Login page
+   This login page is designed to offer an enhanced user experience by harnessing the power of Bootstrap's components, particularly the validation and layout systems. Prompt visual feedback ensures that users can swiftly correct any discrepancies in their inputs, simplifying the login procedure. For an in-depth understanding or queries, please consult the source code or contact the development team.
 
 #### Home page
    There is a header in both home page and detail page. It includes a logo at the left, a navigation bar next to the logo, a search bar at the middel of header and a login button on the right (it will be replaced by an avatar which can display a dropdown menu once it was clicked). Input the key words in the search bar and click search button will filter the cards that meets the keyword and shows in the page.
@@ -50,6 +51,12 @@ This file contains border style for all the elements in the detail page. The bor
 5. detail_main.sass  
 This file aggregates all the style in sass files mentioned above. 
 
+#### login style sheet
+1. login.scss
+This SCSS file is provides custom styling for the login page.
+2. _mobile.scss
+This SCSS file is designed to adjust the styles when the viewport width is 800px or below, which typically corresponds to mobile devices.
+
 ### css folder
     This folder contains all the css files that generated from scss and sass files.
 
@@ -61,6 +68,42 @@ This file aggregates all the style in sass files mentioned above.
 ## Bootstrap Component been Used
 
 ### Login Page (File: login.html)
+
+1. **Form with Validation**: Bootstrap's form and validation classes combined with HTML5 attributes enrich the user input experience with clear feedback on the validity of their inputs.
+   ```html
+   <form class="needs-validation" novalidate> ... </form>
+   ```
+
+2. **Form with  Layout**: Utilizing Bootstrap's layout classes, the design achieves a responsive and aesthetically pleasing alignment and distribution of elements.
+   ```html
+   <div class="mb-3">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail3" placeholder="xxx@xx.xxx" required
+         pattern="^[a-zA-Z0-9._\\u002D]+@[a-zA-Z0-9._\\u002D]+\.[a-zA-Z]+">
+   </div>
+   ```
+
+3. **Input Fields**: Designed with Bootstrap classes to ensure a cohesive visual style.
+   ```html
+   <input type="email" class="form-control" ... >
+   <input type="password" class="form-control" ... >
+   ```
+
+4. **Buttons**: Adopting Bootstrap's button classes for user actions.
+   ```html
+   <button type="submit" class="btn btn-primary">Log in</button>
+   ```
+
+5. **SVG Icon**: An icon integrated from Bootstrap's icon library utilized for the back button.
+   ```html
+   <svg xmlns="http://www.w3.org/2000/svg" ... class="bi bi-arrow-left-short" ... ></svg>
+   ```
+
+6. **Alert**: This dynamic component is used to convey messages to users, such as login errors.
+   ```javascript
+   const wrapper = document.createElement('div');
+   wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">...</div>';
+   ```
 
 
 ### Home Page (File: homepage.html)
@@ -111,3 +154,4 @@ This component is used for showing basic information of the attraction.
    This component is used for showing comments in different pages.
 8. **Spinners**  
    This component is used for creating a waiting animation when comments are  being loaded.
+
