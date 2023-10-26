@@ -154,4 +154,5 @@ This component is used for showing basic information of the attraction.
    This component is used for showing comments in different pages.
 8. **Spinners**  
    This component is used for creating a waiting animation when comments are  being loaded.
-
+9. **Model**  
+   This component is used for confirmation before submitting review.
